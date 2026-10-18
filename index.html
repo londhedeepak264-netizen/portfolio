@@ -1,364 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Deepak Kapil Londhe's web development portfolio.">
-    <title>Deepak Londhe | Web Developer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Deepak Kapil Londhe — Frontend Developer building interactive, responsive, and user-friendly web experiences.">
+  <meta name="theme-color" content="#080d19">
+  <title>Deepak Kapil Londhe | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="navbar container">
-            <a href="#home" class="logo">Deepak<span>.</span></a>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Deepak Londhe home"><span class="brand-mark">D</span><span>Deepak<span class="brand-dot">.</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link nav-contact">Contact <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <button class="menu-toggle" id="menuToggle"
-                aria-label="Open navigation" aria-expanded="false">
-                ☰
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact" class="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Hero section -->
-        <section class="hero container" id="home">
-            <div class="hero-content reveal">
-                <p class="eyebrow">
-                    <span class="status-dot"></span>
-                    WEB DEVELOPER
-                </p>
-
-                <h1>Hi, I'm Deepak Kapil Londhe<span>.</span></h1>
-
-                <h2>I create <span class="gradient-text">web experiences</span>
-                    that feel simple and useful.</h2>
-
-                <p class="hero-description">
-                    I'm interested in frontend development and enjoy
-                    turning ideas into clean, responsive websites
-                    using HTML, CSS, JavaScript and React.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        Explore My Work ↗
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        Let's Connect
-                    </a>
-                </div>
-
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/deepak-londhe-275b24384/"
-                       target="_blank" rel="noopener noreferrer">
-                        LinkedIn ↗
-                    </a>
-                    <a href="mailto:londhedeepak264@gmail.com">
-                        Email ↗
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-card reveal">
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-
-                <div class="profile-symbol">DL<span>.</span></div>
-                <p class="card-caption">LEARNING. BUILDING. IMPROVING.</p>
-
-                <div class="floating-tag tag-one">HTML & CSS</div>
-                <div class="floating-tag tag-two">JavaScript</div>
-                <div class="floating-tag tag-three">React</div>
-            </div>
-        </section>
-
-        <!-- About section -->
-        <section class="section container" id="about">
-            <div class="section-heading reveal">
-                <p class="eyebrow">A LITTLE ABOUT ME</p>
-                <h2>More than just <span class="gradient-text">code.</span></h2>
-            </div>
-
-            <div class="about-content reveal">
-                <div class="about-text">
-                    <p>
-                        I'm Deepak Kapil Londhe, a web developer with
-                        an interest in building useful and attractive
-                        digital experiences.
-                    </p>
-                    <p>
-                        I enjoy working on frontend interfaces, learning
-                        new technologies and improving the small details
-                        that make a website easy to use.
-                    </p>
-                    <p>
-                        My goal is to keep developing my skills through
-                        practical projects, teamwork and real-world
-                        experience.
-                    </p>
-                </div>
-
-                <div class="about-stats">
-                    <div class="stat-box">
-                        <span class="stat-number">04</span>
-                        <span>Core technologies</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">02</span>
-                        <span>Featured projects</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">03</span>
-                        <span>Experience highlights</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-number">∞</span>
-                        <span>Things to learn</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills section -->
-        <section class="section section-alt" id="skills">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">WHAT I WORK WITH</p>
-                    <h2>My <span class="gradient-text">skills.</span></h2>
-                    <p>Technologies I'm learning and using to build for the web.</p>
-                </div>
-
-                <div class="skills-grid">
-                    <article class="skill-card reveal">
-                        <div class="skill-icon">&lt;/&gt;</div>
-                        <h3>HTML5</h3>
-                        <p>Building structured and accessible web pages.</p>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <div class="skill-icon">#</div>
-                        <h3>CSS3</h3>
-                        <p>Responsive layouts, styling and animations.</p>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <div class="skill-icon">JS</div>
-                        <h3>JavaScript</h3>
-                        <p>Adding interactions and dynamic behaviour.</p>
-                    </article>
-
-                    <article class="skill-card reveal">
-                        <div class="skill-icon">⚛</div>
-                        <h3>React</h3>
-                        <p>Learning component-based user interfaces.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects section -->
-        <section class="section container" id="projects">
-            <div class="section-heading reveal">
-                <p class="eyebrow">SOME THINGS I'VE WORKED ON</p>
-                <h2>Featured <span class="gradient-text">projects.</span></h2>
-                <p>A couple of projects that reflect my interest in technology.</p>
-            </div>
-
-            <div class="projects-grid">
-                <article class="project-card reveal">
-                    <div class="project-top">
-                        <div class="project-number">PROJECT 01</div>
-                        <span class="project-symbol">↗</span>
-                    </div>
-
-                    <div class="project-art roadmap-art">
-                        <div class="roadmap-node">Learn</div>
-                        <div class="roadmap-line"></div>
-                        <div class="roadmap-node">Build</div>
-                        <div class="roadmap-line"></div>
-                        <div class="roadmap-node">Grow</div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3>Skill-based Learning Roadmap</h3>
-                        <p>
-                            A learning roadmap concept to organise skills,
-                            projects, courses and interview preparation in
-                            one place.
-                        </p>
-                        <div class="tech-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="mailto:londhedeepak264@gmail.com?subject=Skill-based%20Learning%20Roadmap"
-                           class="project-link">Ask about this project ↗</a>
-                    </div>
-                </article>
-
-                <article class="project-card reveal">
-                    <div class="project-top">
-                        <div class="project-number">PROJECT 02</div>
-                        <span class="project-symbol">↗</span>
-                    </div>
-
-                    <div class="project-art cinemind-art">
-                        <div class="film-icon">▶</div>
-                        <span>STORIES · IDEAS · CINEMA</span>
-                        <strong>CineMind AI</strong>
-                    </div>
-
-                    <div class="project-info">
-                        <h3>CineMind AI</h3>
-                        <p>
-                            An AI-themed project exploring how technology
-                            can support movie discovery and a more engaging
-                            entertainment experience.
-                        </p>
-                        <div class="tech-tags">
-                            <span>AI Concept</span>
-                            <span>Web Development</span>
-                        </div>
-                        <a href="mailto:londhedeepak264@gmail.com?subject=CineMind%20AI"
-                           class="project-link">Ask about this project ↗</a>
-                    </div>
-                </article>
-            </div>
-            <p class="project-note">
-                Project descriptions are introductory summaries. Update
-                them to match the features you have actually built.
-            </p>
-        </section>
-
-        <!-- Experience section -->
-        <section class="section section-alt" id="experience">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <p class="eyebrow">MY JOURNEY</p>
-                    <h2>Experience & <span class="gradient-text">involvement.</span></h2>
-                </div>
-
-                <div class="timeline">
-                    <article class="timeline-item reveal">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-card">
-                            <p class="timeline-label">INTERNSHIP</p>
-                            <h3>Intern — KIT IRF</h3>
-                            <p>
-                                Gaining practical exposure and learning
-                                through internship experience.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item reveal">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-card">
-                            <p class="timeline-label">INTERNSHIP</p>
-                            <h3>Frontend Developer Intern — Ausiphy</h3>
-                            <p>
-                                Developing frontend skills and learning
-                                about website interfaces and implementation.
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="timeline-item reveal">
-                        <span class="timeline-dot"></span>
-                        <div class="timeline-card">
-                            <p class="timeline-label">DESIGN TEAM</p>
-                            <h3>Design Team Member — ACSES</h3>
-                            <p>
-                                Being part of a design team and contributing
-                                to creative and collaborative work.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact section -->
-        <section class="section container" id="contact">
-            <div class="contact-layout">
-                <div class="contact-copy reveal">
-                    <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
-                    <h2>Let's build something <span class="gradient-text">good.</span></h2>
-                    <p>
-                        Have an opportunity, an idea or just want to connect?
-                        Send me a message.
-                    </p>
-
-                    <a href="mailto:londhedeepak264@gmail.com" class="email-link">
-                        londhedeepak264@gmail.com ↗
-                    </a>
-
-                    <a class="linkedin-link"
-                       href="https://www.linkedin.com/in/deepak-londhe-275b24384/"
-                       target="_blank" rel="noopener noreferrer">
-                        Find me on LinkedIn ↗
-                    </a>
-                </div>
-
-                <form class="contact-form reveal" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your name</label>
-                        <input type="text" id="name" name="name"
-                            placeholder="Enter your name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Your email</label>
-                        <input type="email" id="email" name="email"
-                            placeholder="you@example.com" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject"
-                            placeholder="What would you like to discuss?" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your message</label>
-                        <textarea id="message" name="message" rows="5"
-                            placeholder="Write your message here..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary form-button">
-                        Send Message ↗
-                    </button>
-
-                    <p id="formStatus" class="form-status"
-                       role="status" aria-live="polite"></p>
-                    <p class="form-note">
-                        Demo form: messages are not stored or sent to a server.
-                    </p>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <a href="#home" class="logo">Deepak<span>.</span></a>
-            <p>Designed and built by Deepak Kapil Londhe.</p>
-            <a href="#home" class="back-top">Back to top ↑</a>
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-glow glow-one" aria-hidden="true"></div>
+      <div class="hero-glow glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> AVAILABLE TO CONNECT</p>
+          <p class="greeting">Hi, I'm</p>
+          <h1>Deepak Kapil<br><span class="gradient-text">Londhe.</span></h1>
+          <h2 class="hero-role">Frontend Developer <span class="role-line"></span></h2>
+          <p class="hero-description">Building interactive, responsive, and user-friendly web experiences.</p>
+          <p class="hero-subtext">I'm passionate about frontend development, UI design, and building useful web applications.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore My Projects <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#contact">Contact Me <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-meta">
+            <span><span class="meta-icon">⌘</span> HTML · CSS · JavaScript</span>
+            <span class="meta-divider" aria-hidden="true"></span>
+            <span>Based in India</span>
+          </div>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="hero-art reveal" aria-label="Decorative code-inspired illustration">
+          <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div>
+          <div class="code-window">
+            <div class="window-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>portfolio.js</span><span class="window-menu">•••</span></div>
+            <div class="code-content" aria-hidden="true">
+              <p><span class="code-muted">01</span> <span class="code-purple">const</span> <span class="code-blue">developer</span> = {</p>
+              <p><span class="code-muted">02</span> &nbsp; name: <span class="code-green">'Deepak Londhe'</span>,</p>
+              <p><span class="code-muted">03</span> &nbsp; role: <span class="code-green">'Frontend Developer'</span>,</p>
+              <p><span class="code-muted">04</span> &nbsp; skills: [</p>
+              <p><span class="code-muted">05</span> &nbsp;&nbsp; <span class="code-green">'HTML'</span>, <span class="code-green">'CSS'</span>,</p>
+              <p><span class="code-muted">06</span> &nbsp;&nbsp; <span class="code-green">'JavaScript'</span></p>
+              <p><span class="code-muted">07</span> &nbsp; ],</p>
+              <p><span class="code-muted">08</span> &nbsp; passion: <span class="code-green">'Building for people'</span></p>
+              <p><span class="code-muted">09</span> }<span class="code-cursor">▍</span></p>
+            </div>
+            <div class="window-footer"><span><span class="footer-check">✓</span> Ready to build</span><span>UTF-8</span></div>
+          </div>
+          <div class="floating-chip chip-top"><span class="chip-symbol">&lt;/&gt;</span><span><strong>Clean code</strong><small>Built with care</small></span></div>
+          <div class="floating-chip chip-bottom"><span class="chip-symbol chip-spark">✳</span><span><strong>Creative UI</strong><small>Thoughtful details</small></span></div>
+          <div class="art-caption">DESIGN <span>×</span> CODE <span>×</span> EXPERIENCE</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about"><span class="scroll-mouse"></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section section-border" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / ABOUT ME</p>
+          <h2>A little about <span class="gradient-text">what I do.</span></h2>
+          <p class="section-intro">Curious by nature. Focused on creating useful digital experiences.</p>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="large-copy">I am passionate about frontend development, UI design, and building useful web applications.</p>
+            <p>I enjoy bringing ideas to life through thoughtful layouts, responsive interfaces, and interactive details. My focus is on creating experiences that feel clear, intuitive, and enjoyable to use.</p>
+            <a class="text-link" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="about-note reveal">
+            <div class="note-top"><span class="note-icon">✳</span><span class="note-label">MY APPROACH</span></div>
+            <h3>Simple. Useful.<br><span class="gradient-text">User-focused.</span></h3>
+            <p>I believe good interfaces balance visual clarity with practical functionality.</p>
+            <div class="note-rule"></div>
+            <div class="note-bottom"><span>DESIGN WITH INTENTION</span><span>✦</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-border" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / SKILLS</p>
+          <h2>The tools I use to <span class="gradient-text">build.</span></h2>
+          <p class="section-intro">The foundations behind my frontend work.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="skill-icon html-icon">5</div><div><h3>HTML</h3><p>Semantic structure for accessible, meaningful web pages.</p></div><span class="skill-arrow" aria-hidden="true">↗</span></article>
+          <article class="skill-card reveal"><div class="skill-icon css-icon">✳</div><div><h3>CSS</h3><p>Responsive layouts, visual systems, transitions, and styling.</p></div><span class="skill-arrow" aria-hidden="true">↗</span></article>
+          <article class="skill-card reveal"><div class="skill-icon js-icon">JS</div><div><h3>JavaScript</h3><p>Interactive behaviour and useful browser-side functionality.</p></div><span class="skill-arrow" aria-hidden="true">↗</span></article>
+        </div>
+        <p class="skills-footnote"><span class="status-dot"></span> Always learning, building, and improving.</p>
+      </div>
+    </section>
+
+    <section class="section section-border" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 / SELECTED WORK</p>
+          <h2>Projects built with <span class="gradient-text">purpose.</span></h2>
+          <p class="section-intro">A couple of projects I'm working on and developing further.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-visual roadmap-visual">
+              <div class="visual-topline"><span>LEARNING PATH</span><span class="visual-index">01</span></div>
+              <div class="roadmap-demo" aria-hidden="true">
+                <div class="roadmap-node node-done"><span>✓</span><small>Learn</small></div><div class="roadmap-connector"></div>
+                <div class="roadmap-node node-current"><span>02</span><small>Practice</small></div><div class="roadmap-connector"></div>
+                <div class="roadmap-node"><span>03</span><small>Build</small></div>
+              </div>
+              <div class="roadmap-label"><span class="tiny-dot"></span> YOUR NEXT STEP, MADE CLEAR</div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">LEARNING TOOL</span><span class="project-number">PROJECT / 01</span></div>
+              <h3>Skill-Based Learning Roadmap</h3>
+              <p>A project focused on organizing a learner's skill-development journey and keeping learning goals clear.</p>
+              <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <span class="project-status">Project link coming soon <span aria-hidden="true">↗</span></span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-visual cinemind-visual">
+              <div class="visual-topline"><span>CINEMIND AI</span><span class="visual-index">02</span></div>
+              <div class="movie-layout" aria-hidden="true">
+                <div class="movie-poster poster-one"><span>NO.</span><strong>ONE<br>MORE<br>SCENE</strong><i>✦</i></div>
+                <div class="movie-poster poster-two"><span>THE</span><strong>BLUE<br>HOUR</strong><i>◒</i></div>
+                <div class="movie-poster poster-three"><span>AFTER</span><strong>THE<br>LIGHT</strong><i>✳</i></div>
+              </div>
+              <div class="movie-search"><span>⌕</span> Discover your next favourite <span class="search-arrow">↗</span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta"><span class="project-type">MOVIE DISCOVERY</span><span class="project-number">PROJECT / 02</span></div>
+              <h3>CineMind AI</h3>
+              <p>A movie discovery and recommendation website using TMDB data, with search, watchlists, genre filtering, movie details, and trailer links.</p>
+              <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TMDB API</span></div>
+              <span class="project-status">Project link coming soon <span aria-hidden="true">↗</span></span>
+            </div>
+          </article>
+        </div>
+        <p class="projects-note">Live demos and repository links will be added when available.</p>
+      </div>
+    </section>
+
+    <section class="section section-border" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 / EXPERIENCE</p>
+          <h2>Learning through <span class="gradient-text">doing.</span></h2>
+          <p class="section-intro">Experiences and communities that are part of my journey.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item reveal"><div class="experience-marker"><span></span></div><div class="experience-content"><p class="experience-kicker">INTERNSHIP</p><h3>KIT's Innovation &amp; Research Foundation <span class="experience-arrow">↗</span></h3><p>Intern · KIT IRF</p></div><div class="experience-index">01</div></article>
+          <article class="experience-item reveal"><div class="experience-marker"><span></span></div><div class="experience-content"><p class="experience-kicker">INTERNSHIP</p><h3>Ausiphy <span class="experience-arrow">↗</span></h3><p>Frontend Developer Intern</p></div><div class="experience-index">02</div></article>
+          <article class="experience-item reveal"><div class="experience-marker"><span></span></div><div class="experience-content"><p class="experience-kicker">TEAM</p><h3>ACSES <span class="experience-arrow">↗</span></h3><p>Design Team Member</p></div><div class="experience-index">03</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section section-border" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-copy">
+            <p class="eyebrow">05 / CONTACT</p>
+            <h2>Have an idea?<br><span class="gradient-text">Let's talk.</span></h2>
+            <p>Have a project, opportunity, or just want to connect? Send me a message.</p>
+            <a class="email-link" href="mailto:londhedeepak264@gmail.com"><span class="email-icon">✉</span> londhedeepak264@gmail.com <span aria-hidden="true">↗</span></a>
+            <div class="contact-socials"><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><span class="social-note">Replace with your personal profile URL when ready.</span></div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <div class="form-field"><label for="visitor-name">Your name</label><input id="visitor-name" name="name" type="text" autocomplete="name" placeholder="Jane Smith" required></div>
+              <div class="form-field"><label for="visitor-email">Your email</label><input id="visitor-email" name="email" type="email" autocomplete="email" placeholder="jane@example.com" required></div>
+            </div>
+            <div class="form-field"><label for="visitor-subject">Subject</label><input id="visitor-subject" name="subject" type="text" placeholder="What would you like to discuss?" required></div>
+            <div class="form-field"><label for="visitor-message">Message</label><textarea id="visitor-message" name="message" rows="4" placeholder="Write your message here..." required></textarea></div>
+            <button class="button button-primary submit-button" type="submit">Prepare Email <span aria-hidden="true">↗</span></button>
+            <p class="form-note" id="form-note" role="status">Your email app will open with your message prepared. Nothing is sent automatically.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark">D</span><span>Deepak<span class="brand-dot">.</span></span></a>
+      <p>Frontend Developer · Building with purpose.</p>
+      <div class="footer-right"><span>© <span id="copyright-year"></span> Deepak Kapil Londhe</span><a href="#top" class="back-top">Back to top ↑</a></div>
+    </div>
+  </footer>
 </body>
 </html>
