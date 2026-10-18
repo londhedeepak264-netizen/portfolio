@@ -175,3 +175,11 @@ h1 { font-size: clamp(3.3rem, 6.5vw, 5.5rem); letter-spacing: -.075em; line-heig
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Progressive enhancement: reveal content remains visible without JavaScript. */
+html:not(.js-enabled) .reveal { opacity: 1; transform: none; }
+/* Keep the existing dark-blue palette; improve small-screen navigation. */
+@media (max-width: 760px) {
+  .nav-links:not(.open) { pointer-events: none; }
+  .nav-links.open { pointer-events: auto; }
+}
