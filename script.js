@@ -1,6 +1,7 @@
+document.documentElement.classList.add("js-enabled");
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Mobile navigation menu
-    const menuToggle = document.querySelector("#menu-toggle");
+    const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector("#nav-links");
 
     if (menuToggle && navLinks) {
@@ -9,13 +10,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuToggle.getAttribute("aria-expanded") === "true";
 
             menuToggle.setAttribute("aria-expanded", String(!isOpen));
-            navLinks.classList.toggle("active", !isOpen);
+            navLinks.classList.toggle("open", !isOpen);
+        });
+
+        // Close when clicking outside the navigation.
+        document.addEventListener("click", event => {
+            if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            }
         });
 
         // Close menu after clicking a navigation link
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
+                navLinks.classList.remove("open");
                 menuToggle.setAttribute("aria-expanded", "false");
             });
         });
@@ -23,8 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Close menu using Escape key
         document.addEventListener("keydown", event => {
             if (event.key === "Escape") {
-                navLinks.classList.remove("active");
+                navLinks.classList.remove("open");
                 menuToggle.setAttribute("aria-expanded", "false");
+                if (document.activeElement && navLinks.contains(document.activeElement)) menuToggle.focus();
             }
         });
     }
@@ -37,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             (entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
+                        entry.target.classList.add("is-visible");
                         observer.unobserve(entry.target);
                     }
                 });
@@ -51,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         // Fallback for older browsers
         revealElements.forEach(element => {
-            element.classList.add("visible");
+            element.classList.add("is-visible");
         });
     }
 
@@ -97,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         contactForm.addEventListener("submit", event => {
             event.preventDefault();
 
+            if (!contactForm.reportValidity()) return;
             const name = contactForm.querySelector('[name="name"]')?.value.trim();
             const email = contactForm.querySelector('[name="email"]')?.value.trim();
             const subject = contactForm.querySelector('[name="subject"]')?.value.trim();
@@ -113,13 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
             );
 
+            const note = document.querySelector("#form-note");
+            if (note) note.textContent = "Opening your email app. Review and send the prepared message there; it has not been sent yet.";
             window.location.href =
                 `mailto:${recipient}?subject=${emailSubject}&body=${emailBody}`;
         });
     }
 
     // 5. Automatically update the copyright year
-    const yearElement = document.querySelector("#current-year");
+    const yearElement = document.querySelector("#copyright-year");
 
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
@@ -143,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ).matches ? "auto" : "smooth",
                     block: "start"
                 });
+                if (target.id === "main") target.focus({ preventScroll: true });
             }
         });
     });
